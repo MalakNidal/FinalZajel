@@ -1,0 +1,64 @@
+<!DOOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرسائل مع المرشد </title>
+</head>
+<body>
+    <div class="body">
+        <br><br>
+
+    <center>
+        <h1>الرسائل مع المرشد</h1>
+    </center>
+
+    <div class="container">
+        <div class="card-body">
+    <form action="/zajel" method="POST">
+        <input class="form" type="text" required placeholder="أكتب رسالتك" name="body" id="body" size="70" >
+        <button type="submit" id="click" name="click" onclick="">أرسل</button>
+        </form>
+    </div>
+    </div>
+
+</div>
+</body>
+
+<style>
+.body {
+    background-color: gray;
+    height: auto;
+    width: auto;
+}
+
+#click{
+margin: 0px 0px 0px 10px;
+position: absolute;
+top: 95%;
+right: 65%;
+transform: translate(-50%, -50%);
+}
+
+.form {
+margin: 0px 0px 0px -5px;
+position: absolute;
+top: 95%;
+left: 55%;
+transform: translate(-50%, -50%);
+}
+
+.form {
+text-align: right;
+direction: rtl !important;
+unicode-bidi: bidi-override !important;
+}
+
+input[type="text"]::placeholder{
+text-align: right;
+}
+</style>
+
+</html>
