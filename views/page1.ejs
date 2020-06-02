@@ -1,33 +1,224 @@
+<%- include('header') %>
 <!DOOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link href="/css/main1.css" rel="stylesheet" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الرسائل مع المرشد </title>
-</head>
-<body>
-    <div class="body">
-        <br><br>
+    <title> Message with Guide </title>
 
-    <center>
-        <h1>الرسائل مع المرشد</h1>
-    </center>
 
-    <div class="container">
+    <div class="container-fluid">
+        <div class="row">
+          <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                  <!--<a class="navbar-brand" href="#">
+                      Generic Brand
+                  </a>-->
+            <div class="sidebar-sticky">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">
+                    <span data-feather="home"></span>
+                    Dashboard <span class="sr-only">(current)</span>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  <span data-feather="file"></span>
+                                  Home Page
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file"></span>
+                                Personal Information
+                            </a>
+                        </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  <span data-feather="shopping-cart"></span>
+                                  Electronic Forms
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  <span data-feather="users"></span>
+                                  Cources Planes
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  <span data-feather="bar-chart-2"></span>
+                                  Daily Marks
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  <span data-feather="layers"></span>
+                                  GPA
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Calculate Installment 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Message with Guide 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Exit 
+                            </a>
+                        </li>
+                      </ul>
+                  </div>
+              </nav>
+              
+              <div class="col-md-10 offset-md-2">
+                  <div class="container">
+                      <div class="row">
+                          
+                          <div id="dashboard" class="col-md-12">
+                              
+                              
+                              
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+        </div>
+      </div>
+<div class="wrapper wrapper--w780">
+    <div class="card card-3">
         <div class="card-body">
-    <form action="/zajel" method="POST">
-        <input class="form" type="text" required placeholder="أكتب رسالتك" name="body" id="body" size="70" >
-        <button type="submit" id="click" name="click" onclick="">أرسل</button>
-        </form>
-    </div>
-    </div>
-
-</div>
+                <div class="container">
+                    <div class="card-body">
+                <form action="/zajel" method="POST">
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" required placeholder="Write your message" name="body" id="body" size="70" >
+                    </div>
+                        <button class="btn btn-primary" type="submit" id="click" name="click" onclick="">Send</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        
+    <br><br><br>
 </body>
+<script>
+    feather.replace();
+</script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+
+body {
+	background: white;
+}
+
+.feather {
+	width: 16px;
+	height: 16px;
+	vertical-align: text-bottom;
+}
+
+.sidebar {
+	position: fixed;
+	top: 140px;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	padding: 0;
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-sticky {
+	position: relative;
+	top: 0;
+	height: calc(100vh - 48px);
+	padding-top: 1rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+	.sidebar-sticky {
+		position: -webkit-sticky;
+		position: sticky;
+	}
+}
+
+.navbar-brand {
+	display: block;
+	height: 48px;
+	padding: 0.5rem 1rem;
+	margin: 0;
+	background: #343434;
+	color: #fff;
+	text-align: center;
+	transition: background 0.5s;
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 1.8rem;
+	line-height: 2rem;
+}
+
+.navbar-brand:hover {
+	background: #3c3c3c;
+	color: #efefef;
+	transition: background 0.5s;
+}
+
+.sidebar .nav-link {
+	padding: 1rem;
+	font-weight: 500;
+	color: #ccc;
+}
+
+.sidebar .nav-item:hover {
+	background: #EEEEEE;
+}
+
+.sidebar .nav-link:hover {
+	color: #333333;
+}
+
+.sidebar .nav-link .feather {
+	margin-right: 4px;
+	color: #999;
+}
+
+.sidebar .nav-link.active {
+	color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+	color: inherit;
+}
+
+.sidebar .nav-item:hover {
+	padding-left: 16px;
+	transition: padding-left 0.5s;
+}
+
+#dashboard {
+	display: grid;
+	grid-template-columns: repeat(2, 100px);
+	grid-template-rows: repeat(2, 100px);
+}
+
+
 .body {
     background-color: gray;
     height: auto;
@@ -51,13 +242,13 @@ transform: translate(-50%, -50%);
 }
 
 .form {
-text-align: right;
+text-align: left;
 direction: rtl !important;
 unicode-bidi: bidi-override !important;
 }
 
 input[type="text"]::placeholder{
-text-align: right;
+text-align: left;
 }
 </style>
 
